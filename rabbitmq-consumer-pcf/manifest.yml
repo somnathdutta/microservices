@@ -1,0 +1,6 @@
+applications:
+- name: rabbitmq-consumer
+path: target\rabbitmq-consumer-pcf.jar
+memory: 950MB
+services:
+  - rabbitmq-server
