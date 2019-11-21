@@ -1,0 +1,6 @@
+applications:
+- name: rabbitmq-producer
+path: target\rabbitmq-producer-pcf.jar
+memory: 650MB
+services:
+  - rabbitmq-server
