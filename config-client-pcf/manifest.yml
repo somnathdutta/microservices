@@ -1,0 +1,9 @@
+applications:
+  - name: employee
+    path: target\config-client-pcf.jar
+    instances: 1
+    memory: 1G
+    services:
+      - employee-config-server
+    env:
+      SPRING_PROFILES_ACTIVE: prod
