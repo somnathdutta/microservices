@@ -1,0 +1,9 @@
+applications:
+  - name: greeter-messages
+    path: target\greeter-messages.jar
+    instances: 1
+    memory: 1G
+    services:
+      - greeter-service-registry
+    env:
+      SPRING_PROFILES_ACTIVE: development
