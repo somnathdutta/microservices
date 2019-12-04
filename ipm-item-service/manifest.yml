@@ -1,0 +1,9 @@
+applications:
+- name: item-service
+path: target/item-service.jar
+domain: cfapps.io
+memory: 1GB
+instances: 1
+services:
+- registry-service-709075
+- circuit-breaker-service-709075
