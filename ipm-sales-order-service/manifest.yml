@@ -1,0 +1,12 @@
+applications:
+  - name: sales-order-service-709075
+    path: target\sales-order-service.jar
+    instances: 1
+    memory: 1G
+    services:
+    - messaging-service-709075
+    - circuit-breaker-service-709075
+    - registry-service-709075
+    - config-server-709075
+env:
+      SPRING_PROFILES_ACTIVE: prod
