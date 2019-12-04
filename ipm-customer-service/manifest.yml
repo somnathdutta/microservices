@@ -1,0 +1,12 @@
+applications:
+- name: customer-service-709075
+path: target/customer-service.jar
+domain: cfapps.io
+memory: 1GB
+instances: 1
+services:
+- messaging-service-709075
+- circuit-breaker-service-709075
+- config-server-709075
+env:
+      SPRING_PROFILES_ACTIVE: prod
