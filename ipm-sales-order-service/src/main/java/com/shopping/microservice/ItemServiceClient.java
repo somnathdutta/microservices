@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient("item-service-709075")
+@FeignClient(name="item-service-709075")
 interface ItemServiceClient {
   
 	@GetMapping("/item-service/items")

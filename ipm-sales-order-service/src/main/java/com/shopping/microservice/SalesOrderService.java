@@ -30,6 +30,9 @@ public class SalesOrderService {
 
 	@Autowired
 	private SalesOrderRepository salesOrderRepository;
+	
+	@Autowired
+	private CustomConfiguration customConfiguration;
 
 	public Customer getCustomerById(Long customerId) {
 		return salesOrderCustomerRepository.getOne(customerId);
@@ -75,7 +78,7 @@ public class SalesOrderService {
 		}
 
 		return "Hi " + customer.get().getFirstName() + " " + customer.get().getLastName()
-				+ "! Your order is created with the order id  :" + createdOrder.getId();
+				+ customConfiguration.getSuccessMessage() + createdOrder.getId();
 	}
 
 	public String orderFailed(SalesOrder order) {
